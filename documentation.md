@@ -10,3 +10,9 @@ dotenv: A zero-dependency module that loads environment variables from a .env fi
 
 
 # npm install dotenv
+
+**first run**
+# npm run build
+to get tailwind ready
+
+then run the index.js
