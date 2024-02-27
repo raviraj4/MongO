@@ -1,21 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./output.css">
-</head>
-<body>
-    <div class="p-4 bg-gradient-to-tr from-green-300 to-cyan-400">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="p-4 the-box bg-gradient-to-r from-red-500 to-orange-500 flex justify-center content-center">
+      <div
+        class="rounded-2xl sub-box p-5 mt-5  m-5 backdrop-blur-sm bg-white/30 flex justify-center content-center border-solid border-2 border-white"
+      >
         <form action="/contact" method="POST">
-            <label class="text-2xl font-extrabold text-white py-3 block" for="email">Enter Email:</label>
-            <input class="p-3 w-96 block" type="email" name="email">
-            <label class="text-2xl font-extrabold text-white py-3 block" for="message">Enter Message</label>
-            <textarea class="p-3 w-96 block" name="message" cols="30" rows="10"></textarea>
-            <input class="text-xl font-semibold px-6 py-3 my-3 block rounded-md bg-emerald-600 text-white" type="Submit" value="Submit" id="submit">            
-        
+          <label class="text-md font-semibold text-white py-3 block" for="email"
+            >Enter Email:</label
+          >
+          <input
+          id="email"
+            class="p-3 w-96 block rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            type="email"
+            name="email"
+          />
+          <label
+            class="text-md font-semibold text-white py-3 block"
+            for="message"
+            >Enter Message</label
+          >
+          <textarea
+            class="p-3 w-96 block rounded-lg "
+            id="message"
+            name="message"
+            cols="20"
+            rows="10"
+          ></textarea>
+          <input
+            class="text-xl font-bold px-6 py-3 my-3 block rounded-md cursor-pointer focus:ring-blue-500 focus:border-blue-500 dark:focus:ring-blue-500 dark:focus:border-blue-500 bg-white hover:bg-gray-100 text-red-500"
+            type="Submit"
+            value="Submit"
+            id="submit"
+          />
         </form>
+      </div>
     </div>
-</body>
+
+
+  </body>
 </html>

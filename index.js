@@ -1,6 +1,7 @@
 var mongoose = require("mongoose");
 var express = require("express");
 var bodyParser = require("body-parser");
+
 require('dotenv').config()
 
 const app = express();
@@ -25,6 +26,11 @@ db.once("open", () => {
 app.post("/contact", (req, res) => {
   var email = req.body.email;
   var message = req.body.message;
+
+  if(email.trim()==='' || message.trim()===''){
+    console.log("Failed! Field can't be empty")
+    res.redirect('error_page.html')
+  }else{
   console.log(`recieved data ${email} - ${message} `)
   var data = {
     "email": email,
@@ -38,15 +44,17 @@ app.post("/contact", (req, res) => {
 
   });
   return res.redirect('succes_page.html')
-});
+}});
 // app.get("/", (request, response)=>{}) "/" means root path,
-app
-  .get("/", (req, res) => {
+
+
+app.get("/", (req, res) => {
     res.set({
       "Allow-access-Allow-Origin": "*",
     });
     res.redirect("index.html");
   })
-  .listen(3080);
+  .listen(3090);
+
 
 console.log("Listening at port https://localhost:3080");
